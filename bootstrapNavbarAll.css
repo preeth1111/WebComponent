@@ -1,0 +1,501 @@
+
+
+   /*..................Custom Styling..............*/
+   $navbarBgColor:#2c2e3e;
+   $navbarLinkColorPrimary:#868aa8;
+   $navbarLinkColorSecondary:#525672;
+   $navbarLinkHoverBgColor:#282a3a;
+   $navbarIconStackHeight:4.3rem;
+   $navbarHeight:3rem;
+   html,body{
+     height: 100%;
+   }
+
+   body,html,
+   h1,
+   h3,
+   .h1,
+   .h3 {
+     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+
+
+   .bg-dark{
+       background-color: $navbarBgColor !important;
+   }
+
+   .navbar  .navbar-nav  .nav-link{
+     color:$navbarLinkColorPrimary;
+
+   }
+.navbar  .navbar-nav > li > a > i{
+  color:#525672;
+}
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active{
+  color:$navbarLinkColorPrimary;
+}
+   /*......................................*/
+
+    /*.................General Navbar Config.....................*/
+
+    .navbar{
+      transition: width 400ms;
+      height: $navbarHeight;
+    }
+
+    .icon-border{
+      margin-left: 5px;
+      border-radius: 50%;
+      height: 30px;
+
+      width: 30px;
+      align-items: center;
+      display: flex;
+      border: 1px solid #868aa8;
+      justify-content: center;
+    }
+
+    .navbar:not(.sidenav) .navbar-nav:not(.action-items) > .nav-item{
+        min-width: 83px;
+        width: auto;
+    }
+
+
+    .navbar:not(.sidenav) .navbar-nav.ml-auto > .nav-item{
+      width: auto;
+    }
+
+    .navbar:not(.sidenav) > .navbar-collapse,
+    .navbar:not(.sidenav)  .navbar-nav
+    {
+      height:100%;
+    }
+
+    .navbar:not(.sidenav){
+      padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+
+    .navbar:not(.sidenav) .navbar-nav > .nav-item {
+      align-items: center;
+          justify-content: center;
+          display: flex;
+
+          -webkit-transition: background-color .3s;
+                transition: background-color .3s;
+
+    }
+    .navbar .navbar-nav > .nav-item > .nav-link:not(.user-avatar){
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    .navbar .navbar-nav > .nav-item > .nav-link:not(.user-avatar) i{
+      width:30px;
+    }
+
+
+    .navbar .navbar-nav > .nav-item > .nav-link{
+      text-align: center;
+      font-size: 0.8rem;
+      -webkit-transition: color .3s;
+            transition: color .3s;
+
+    }
+
+    .navbar-nav.action-items .nav-link span.badge{
+      position: absolute;
+      top: -8px;
+      left: 65%;
+    }
+    .navbar .navbar-nav:not(.action-items) > li:hover{
+
+      background: $navbarLinkHoverBgColor;
+    }
+    .navbar .navbar-nav > li:hover i{
+      color: $navbarLinkColorPrimary;
+
+    }
+    .navbar .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+      color: $navbarLinkColorPrimary !important;
+    }
+
+    .navbar .navbar-nav > .nav-item,.navbar .navbar-nav > .nav-item > .nav-link{
+      position: relative;
+    }
+
+    .navbar:not(.sidenav) .navbar-nav > li:hover > .treeview-menu-block {
+
+
+      width: 180px;
+        display: block !important;
+      position: absolute;
+      top:100%;
+
+
+      }
+
+      .navbar:not(.sidenav) .navbar-nav > .nav-item >  .treeview-menu-block {
+        padding-top: 7px;
+     }
+
+     .navbar .navbar-nav > .nav-item > .treeview-menu-block{
+       display: none!important;
+           -webkit-transform: translateZ(0);
+           transform: translateZ(0);
+           -webkit-transform-style: preserve-3d;
+
+     }
+
+
+
+       .navbar  li > .treeview-menu-block > .treeview-menu {
+         margin: 0 1px;
+         background: $navbarBgColor;
+       -webkit-box-shadow:0 0 15px 1px rgba(69,65,78,.4);
+       box-shadow:0 0 15px 1px rgba(69,65,78,.4);
+       }
+       .treeview-menu {
+
+         list-style: none;
+         padding-top:5px;
+         padding-bottom: 5px;
+         margin: 0;
+         padding-left: 5px; }
+
+
+       .treeview-menu > li {
+         margin: 0; }
+
+       .treeview-menu > li > a {
+         padding: 5px 5px 5px 15px;
+         display: block;
+         font-size: 14px; }
+
+       .treeview-menu > li > a > .material-icons {
+         width: 20px; }
+
+     /*......................................*/
+
+
+
+
+/*................Navbar Search Compoenent......................*/
+
+input {
+  border: 1px solid $navbarLinkColorPrimary;
+  font-size: 12px;
+  height: 30px;
+  padding: 4px 8px;
+  position: absolute;
+  width: 50%;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  text-align: center;
+}
+button:focus {
+  outline: none;
+}
+button.btn-search, button.btn-reset {
+  color: $navbarLinkColorSecondary;
+  border: none;
+  height: 30px;
+  font-size: 12px;
+  padding: 4px;
+  position: absolute;
+  width: 30px;
+}
+.navbar-search > button.btn-search >i.material-icons{
+  font-size: 20px !important;
+}
+.navbar-search {
+ width:30px;
+ height:30px;
+  position: relative;
+
+}
+.navbar-search input {
+  border-radius: 15px;
+  transition: all .6s ease-in-out .3s;
+  width: 30px;
+  right: 0;
+}
+.navbar-search input:focus,.navbar-search input:hover{
+  transition-delay: 0;
+  width: 200px;
+}
+.navbar-search input:focus ~ button.btn-search, .navbar-search input:focus ~ button.btn-search {
+
+  color: $navbarLinkColorPrimary;
+  left: 172px;
+  transition-delay: 0;
+}
+
+.navbar-search button, .navbar-search button {
+  transition: all .6s ease-in-out;
+}
+.navbar-search button.btn-search, .navbar-search button.btn-search {
+  background: $navbarBgColor;
+  border-radius: 50%;
+  height: 30px;
+  right: 0px;
+
+  transition-delay: .3s;
+  width: 30px;
+
+
+  border: 1px solid $navbarLinkColorPrimary;
+
+  font-size: 20px;
+
+  line-height: 0px;
+  padding: 0;
+z-index: 2;
+}
+
+button.btn.btn-search:hover + input{
+  width:200px;
+}
+
+
+
+/*......................................*/
+
+@media only screen and (min-width:992px){
+
+/*............Navbar No Icon Styling...........*/
+.navbar[class*="no-icon-nav"] .navbar-nav.navbar-navigation-menu > .nav-item > .nav-link > i{
+  display: none;
+}
+
+
+
+
+
+/*............Navbar No Icon Styling End...........*/
+
+
+/*............Navbar NavItem width Config...........*/
+
+
+.navbar[class*="icon-stack"]:not(.sidenav) .navbar-nav > .nav-item {
+
+      width: 83px;
+
+}
+
+
+/*............NNavbar NavItem width Config End...........*/
+
+
+/*............Navbar Height/Spacing Config...........*/
+
+.navbar[class*="icon-stack"]:not(.sidenav){
+
+    height: $navbarIconStackHeight !important;
+}
+
+.navbar[class*="icon-stack"] .navbar-nav > .nav-item > .nav-link:not(.user-avatar){
+
+  flex-direction: column;
+
+}
+/*............Navbar Height/Spacing Config End...........*/
+.navbar.sidenav{
+  height: 100%;
+width: 9rem;
+align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 0;
+}
+
+.navbar.sidenav > .navbar-brand{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  padding: 15px;
+}
+.navbar.sidenav .navbar-nav{
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar.sidenav .navbar-collapse{
+  align-items: flex-start;
+  width: 100%;
+      padding-top: 35px;
+}
+
+
+  .navbar[class*="icon-stack"].sidenav:not(.side-collapsed) .navbar-nav:not(.action-items) > .nav-item > .nav-link span{
+  margin-top: .5rem;
+}
+
+
+
+.navbar[class*="icon-stack"] .navbar-nav:not(.action-items) .nav-link span.badge{
+  position: absolute;
+  top: 1px;
+  left: 70%;
+}
+
+
+/*.....................................Side Collapsed .................*/
+.navbar.side-collapsed{
+  width: 3rem;
+}
+.navbar.icon-stack.sidenav.side-collapsed .navbar-nav > li:hover > a > span {
+  top: 0px;
+  margin-left: 0;
+  width: 180px;
+display: flex !important;
+position: absolute;
+left: 100%;
+align-items: center;
+justify-content: center;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+.navbar.icon-stack.sidenav.side-collapsed .navbar-nav > li > a > span  {
+
+  margin:0;
+      height: 100%;
+    font-size:15px;
+    background: $navbarBgColor;
+  -webkit-box-shadow:0 0 15px 1px rgba(69,65,78,.4);
+  box-shadow:0 0 15px 1px rgba(69,65,78,.4);
+}
+/*................................................*/
+
+
+
+/*..............navbar submenu................*/
+.navbar.icon-stack.sidenav.side-collapsed .navbar-nav > li >a>span {
+  display: none!important;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-transform-style: preserve-3d;
+
+}
+
+
+.navbar.icon-stack.sidenav:not(.side-collapsed) .navbar-nav:not(.action-items) > li:hover > .treeview-menu-block {
+  top: 20px;
+  margin-left: 0; }
+
+
+.navbar.icon-stack.sidenav .navbar-nav:not(.action-items) > li:hover > .treeview-menu-block {
+
+
+  width: 180px;
+    display: block !important;
+  position: absolute;
+  left:100%;
+
+
+  }
+
+
+/*.....................................*/
+/*............Flexible Navbar.............*/
+
+.navbar[class*="flexible-nav"]{
+  position: static;
+}
+
+.navbar[class*="flexible-nav"].sidenav .navbar-nav.action-items{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  max-width: 300px;
+  height: 3rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar[class*="flexible-nav"].sidenav .navbar-nav.action-items > li:hover > .treeview-menu-block {
+
+
+  width: 180px;
+    display: block !important;
+  position: absolute;
+  top:100%;
+  right:-10px;
+
+  }
+
+  .navbar[class*="flexible-nav"].sidenav .navbar-nav.action-items > .nav-item >  .treeview-menu-block {
+    padding-top: 7px;
+ }
+
+/*..............................*/
+}
+
+/*................Mobile............*/
+@media only screen and (max-width:992px){
+.navbar .navbar-nav.navbar-navigation-menu{
+  position: absolute;
+    left: 0;
+    top: 6rem;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: flex-start;
+    background: white;
+    align-items: flex-start;
+    overflow: auto;
+    height: auto;
+}
+.navbar .navbar-nav.action-items{
+  position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: #2c2e3e;
+}
+
+.collapse.navbar-collapse{
+  display: block;
+}
+.navbar-toggler{
+  display: none;
+}
+.user-avatar{
+  position: absolute !important;
+bottom: 100%;
+right: -20px;
+}
+
+.navbar:not(.sidenav) .navbar-nav:not(.action-items) > .nav-item{
+  width: 100%;
+}
+.navbar:not(.sidenav) .navbar-nav > .nav-item{
+  justify-content:flex-start;
+}
+.navbar:not(.sidenav) .navbar-nav > .nav-item > .treeview-menu-block{
+  width: 100% !important;
+padding: 0;
+}
+
+
+
+}
+/*......................................*/
